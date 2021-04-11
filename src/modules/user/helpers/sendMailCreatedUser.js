@@ -9,7 +9,7 @@ export async function sendMailCreatedUser({
 }) {
   const host = process.env.CLIENT_HOST;
   const link = `${host}/user/verify/email/${userId}/${emailHashConfirmation}`;
-  const subject = '[ClientBase] Verify your email';
+  const subject = '[Feature-Flag] Verify your email';
 
   const message = {
     html: `Hi ${firstName} ${lastName},<br/>
@@ -18,8 +18,8 @@ export async function sendMailCreatedUser({
           Please, verify your email address <a href=${link}>click here</a>
           <br/><br/>
           Thanks,<br/>
-          Your friends at ClientBase`,
-    text: `Hi ${firstName} ${lastName},\nYou registered at ${host}\n\nPlease, verify your email address click the link below\n${link}\n\nThanks,\nYour friends at ClientBase`,
+          Your friends at Feature-Flag`,
+    text: `Hi ${firstName} ${lastName},\nYou registered at ${host}\n\nPlease, verify your email address click the link below\n${link}\n\nThanks,\nYour friends at Feature-Flag`,
   };
 
   console.log(message);

@@ -15,14 +15,14 @@ const emailTemplate = (host, hash, userId) => {
           <a href=${link}>${link}</a><br/>
           Link is valid only 3 hours.<br/><br/>
           Thanks,<br/>
-          Your friends at ClientBase`,
-    text: `You can use the following link to reset your password:\n${link}\nLink is valid only 3 hours.\n\nThanks,\nYour friends at ClientBase`,
+          Your friends at Feature-Flag`,
+    text: `You can use the following link to reset your password:\n${link}\nLink is valid only 3 hours.\n\nThanks,\nYour friends at Feature-Flag`,
   };
 };
 
 const userPasswordResetRequest = async (req, res) => {
   const hash = new mongoose.Types.ObjectId().toString();
-  const subject = '[ClientBase] Reset password';
+  const subject = '[Feature-Flag] Reset password';
   const host = process.env.CLIENT_HOST;
 
   const email = get(req, 'body.email', '').trim().toLowerCase();

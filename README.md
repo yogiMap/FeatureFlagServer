@@ -1,4 +1,4 @@
-// ClientBase base version
+// Feature-Flag base version
 
 ## Initial setup
 
@@ -10,7 +10,7 @@ We must use STAGE env for develop and testing.
 #### Create`.env` file in the root
 
 ```$xslt
-MONGO_CONNECTION_STRING=mongodb://localhost:27017/clientBase
+MONGO_CONNECTION_STRING=mongodb://localhost:27017/feature-Flag
 
 JWT_KEY=jwtSecretKey
 JWT_EXPIRES_IN=10d
@@ -137,11 +137,11 @@ path Add it to both System and User Environments, you can call it "MongoDB"
 4. Click on `Import` button. Then click on `Choose files`.
 5. Now you need find a directory with your project. Then select `docs` folder
    and then `postman` folder.
-6. Choose `ClientBase.postman_collection.json`
-   and `ClientBase-LOCAL.postman_environment.json` files in
+6. Choose `Feature-Flag.postman_collection.json`
+   and `Feature-Flag-LOCAL.postman_environment.json` files in
    /yourProjectDirectory/docs/postman and open them both
 7. In the upper right corner of the Postman interface, find a drop-down
-   with `No Environment` field. Change it to `ClientBase-LOCAL`.
+   with `No Environment` field. Change it to `Feature-Flag-LOCAL`.
 
 #### Step 4 - Running local server and sending first request
 
@@ -159,7 +159,7 @@ path Add it to both System and User Environments, you can call it "MongoDB"
       not working, use your head and hands, possibly Google, even if that did
       not help - go https://www.apple
       .com/shop/ and get a new Apple MacPC or Laptop, any will do.
-5. After all, open Postman and open `ClientBase Collection`. Click on it, then
+5. After all, open Postman and open `Feature-Flag Collection`. Click on it, then
    find `INFO` folder and send `GET localhost:5000/info` request.
 6. If you get a status 200 response - my warmest congratulations all is set and
    working fine, hug yourself!

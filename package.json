@@ -1,8 +1,8 @@
 {
-  "name": "ClientBase-server",
+  "name": "Feature-Flag-Server",
   "version": "0.1.0",
   "private": true,
-  "description": "ClientBase server",
+  "description": "Feature-Flag Server",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf build && mkdir build",
