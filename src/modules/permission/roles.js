@@ -8,6 +8,14 @@ const base = [
   'base.delete.own',
 ];
 
+const flag = [
+  'flag.create.own',
+  'flag.get.own',
+  'flag.search.own',
+  'flag.update.own',
+  'flag.delete.own',
+];
+
 const userAdmin = [
   'user.auth',
   'user.get.all',
@@ -21,7 +29,7 @@ const userAdmin = [
 const roles = {
   new: ['user.auth'],
 
-  verified: ['user.auth', ...base],
+  verified: ['user.auth', ...base, ...flag],
 
   admin: [
     // USER
@@ -29,6 +37,7 @@ const roles = {
 
     // EXAMPLE
     ...base,
+    ...flag,
   ],
 
   // impersonate: [
