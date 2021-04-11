@@ -11,9 +11,7 @@ import listRouter from '../lists/Routes';
 
 export default function routes(app) {
   app.use('/base', baseRouter);
-  app.use('/client', clientRouter);
   app.use('/user', userRouter);
-  app.use('/fake', fakeRouter);
   app.use('/analytics', analyticsRouter);
 
   app.use('/info', infoRouter);
