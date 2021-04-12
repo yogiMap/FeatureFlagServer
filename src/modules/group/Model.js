@@ -19,11 +19,13 @@ const Schema = mongoose.Schema(
       required: false,
     },
 
-    flag: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Flag',
-      required: true,
-    },
+    flag: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Flag',
+        required: true,
+      },
+    ],
 
     owner: {
       type: mongoose.Schema.Types.ObjectId,

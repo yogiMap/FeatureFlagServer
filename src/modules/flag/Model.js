@@ -19,6 +19,12 @@ const Schema = mongoose.Schema(
       required: false,
     },
 
+    group: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Group',
+      required: true,
+    },
+
     owner: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',

@@ -16,12 +16,14 @@ export default async function flagCreate(req, res) {
   const name = get(req, 'body.name');
   const value = get(req, 'body.value');
   const description = get(req, 'body.description');
+  const group = get(req, 'body.group');
 
   const createFlagQueryResult = await createFlagQuery({
     _id,
     name,
     value,
     description,
+    group,
     owner: userId,
   });
 
