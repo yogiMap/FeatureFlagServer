@@ -9,11 +9,6 @@ const Schema = mongoose.Schema(
       required: true,
     },
 
-    value: {
-      type: String,
-      required: true,
-    },
-
     description: {
       type: String,
       required: false,
@@ -23,7 +18,7 @@ const Schema = mongoose.Schema(
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Flag',
-        required: true,
+        required: false,
       },
     ],
 

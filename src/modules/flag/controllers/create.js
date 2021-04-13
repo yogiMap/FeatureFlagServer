@@ -4,6 +4,7 @@ import message from '../../utils/messages';
 import analytics from '../../analytics/controllers/analytics';
 import { get } from 'lodash';
 import createFlagQuery from '../queries/create';
+import addFlagToGroupQuery from '../queries/addFlagToGroup';
 
 export default async function flagCreate(req, res) {
   // Создаем id материала который будет создан
@@ -26,6 +27,13 @@ export default async function flagCreate(req, res) {
     group,
     owner: userId,
   });
+
+  const addFlagToGroupResult = await addFlagToGroupQuery({
+    flagId: _id,
+    groupId: group,
+  });
+
+  console.log(addFlagToGroupResult);
 
   if (createFlagQueryResult.success) {
     res.status(200).json(createFlagQueryResult);

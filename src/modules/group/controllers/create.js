@@ -14,14 +14,12 @@ export default async function groupCreate(req, res) {
 
   // Читаем данные из запроса
   const name = get(req, 'body.name');
-  const value = get(req, 'body.value');
   const description = get(req, 'body.description');
   const flag = get(req, 'body.flag');
 
   const createGroupQueryResult = await createGroupQuery({
     _id,
     name,
-    value,
     description,
     flag,
     owner: userId,
