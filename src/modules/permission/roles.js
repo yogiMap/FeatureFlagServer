@@ -37,7 +37,7 @@ const userAdmin = [
 const roles = {
   new: ['user.auth'],
 
-  verified: ['user.auth', ...base, ...flag, ...group ],
+  verified: ['user.auth', ...base, ...flag, ...group],
 
   admin: [
     // USER

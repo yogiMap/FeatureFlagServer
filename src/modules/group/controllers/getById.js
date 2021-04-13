@@ -9,10 +9,10 @@ const groupGetById = (req, res) => {
 
   Group.findById(groupId)
     // подтягивает данные из соседних коллекций, аналог SQL JOIN
-    // .populate({
-    //   path: 'members',
-    //   select: 'name links',
-    // })
+    .populate({
+      path: 'flag',
+      select: 'name value',
+    })
     // .populate({
     //   path: 'lectures',
     //   options: { sort: { date: -1 } },

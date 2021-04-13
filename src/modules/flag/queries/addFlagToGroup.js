@@ -1,4 +1,6 @@
 import Group from '../../group/Model';
+import analytics from '../../analytics/controllers/analytics';
+import message from '../../utils/messages';
 
 export default function addFlagToGroupQuery({ flagId, groupId }) {
   return Group.updateOne(
