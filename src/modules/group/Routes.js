@@ -36,9 +36,9 @@ router.post(
 router.get(
   '/:groupId',
   serviceHeader('groupGetById'),
-  userCheckAuth,
-  userCheckPerm('group.get.own'),
-  pauseController,
+  // userCheckAuth,
+  // userCheckPerm('group.get.own'),
+  // pauseController,
   groupGetById,
 );
 
